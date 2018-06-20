@@ -4,6 +4,7 @@ $do_key = "DO_API_KEY"; //DigitalOcean API key
 $cf_key = "CF_API_KEY"; //Cloudfalre API key
 $cf_email = "email@email.com"; //Cloudflare email id
 $domain_name = "example.com"; //domain name
+$image_id = "34976253"; //image id. refer https://developers.digitalocean.com/documentation/v2/#list-all-images
 
 $subdomain_start = 1;
 $subdomain_end = 5;
@@ -25,7 +26,7 @@ for ($x = $subdomain_start; $x <= $subdomain_end; $x++) {
 		"name" => "$x.$domain_name",
 		"region" => "sgp1",
 		"size" => "s-1vcpu-1gb",
-		"image" => 34976253,
+		"image" => $image_id,
 		"ssh_keys" => null,
 		"backups" => false,
 		"ipv6" => false,
